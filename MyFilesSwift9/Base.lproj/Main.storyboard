@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFilesSwift9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGx-kL-c7B">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="MyFiles" id="Mjq-iV-Kbp"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-EY-EcC">
+                                <rect key="frame" x="265" y="94" width="71" height="30"/>
+                                <state key="normal" title="Local PDF">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dUw-IW-KZs" kind="presentation" id="gWY-nV-hSZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiL-xX-kXO">
+                                <rect key="frame" x="255" y="126" width="90" height="30"/>
+                                <state key="normal" title="External PDF">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HOZ-PZ-ge8" kind="presentation" id="OLT-4D-oUV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jGx-kL-c7B" secondAttribute="trailing" id="0LO-Vx-GVf"/>
+                            <constraint firstItem="jGx-kL-c7B" firstAttribute="centerX" secondItem="bKh-EY-EcC" secondAttribute="centerX" id="2Kv-AL-rbL"/>
+                            <constraint firstItem="bKh-EY-EcC" firstAttribute="centerX" secondItem="YiL-xX-kXO" secondAttribute="centerX" id="6bs-Bj-haR"/>
+                            <constraint firstItem="jGx-kL-c7B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6qt-H9-4Og"/>
+                            <constraint firstItem="bKh-EY-EcC" firstAttribute="top" secondItem="jGx-kL-c7B" secondAttribute="bottom" constant="30" id="N84-O4-GvJ"/>
+                            <constraint firstItem="jGx-kL-c7B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QLT-rf-C6N"/>
+                            <constraint firstItem="YiL-xX-kXO" firstAttribute="top" secondItem="bKh-EY-EcC" secondAttribute="bottom" constant="2" id="qck-vQ-hsD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="241"/>
+        </scene>
+        <!--LocalPDF View Controller-->
+        <scene sceneID="KQh-V1-H6w">
+            <objects>
+                <viewController id="dUw-IW-KZs" customClass="LocalPDFViewController" customModule="MyFilesSwift9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ALo-yo-jvf"/>
+                        <viewControllerLayoutGuide type="bottom" id="23U-rn-Tkj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wBu-v7-zkV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxl-QA-8Yd">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="MyFilesFav" id="xTt-2c-5Ka">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="3bG-Hd-frS">
+                                            <connections>
+                                                <action selector="btnBack:" destination="dUw-IW-KZs" id="DFK-Y4-SZv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jug-67-Pe9">
+                                <rect key="frame" x="0.0" y="64" width="605" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zxl-QA-8Yd" secondAttribute="trailing" id="L3Z-Ad-52A"/>
+                            <constraint firstItem="Zxl-QA-8Yd" firstAttribute="leading" secondItem="Jug-67-Pe9" secondAttribute="leading" id="MvW-rO-IAC"/>
+                            <constraint firstItem="Zxl-QA-8Yd" firstAttribute="leading" secondItem="wBu-v7-zkV" secondAttribute="leading" id="Tny-p6-wfu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jug-67-Pe9" secondAttribute="trailing" constant="-21" id="dD6-7B-VK4"/>
+                            <constraint firstItem="Jug-67-Pe9" firstAttribute="bottom" secondItem="23U-rn-Tkj" secondAttribute="top" id="gAj-Kz-hop"/>
+                            <constraint firstItem="Jug-67-Pe9" firstAttribute="top" secondItem="Zxl-QA-8Yd" secondAttribute="bottom" id="mLU-xM-6SI"/>
+                            <constraint firstItem="Zxl-QA-8Yd" firstAttribute="top" secondItem="ALo-yo-jvf" secondAttribute="bottom" id="sOc-Zf-zpM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="Jug-67-Pe9" id="MZg-Ke-16R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAF-Ca-poz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="241"/>
+        </scene>
+        <!--Load External View Controller-->
+        <scene sceneID="tvs-RN-gyS">
+            <objects>
+                <viewController id="HOZ-PZ-ge8" customClass="LoadExternalViewController" customModule="MyFilesSwift9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wcw-v5-MOv"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Sg-zs-IsM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2HW-mg-Nyt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XrQ-Uf-XBK">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="My External PDF" id="5UW-bA-k3g">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="U2i-pn-Jto">
+                                            <connections>
+                                                <action selector="btnBack:" destination="HOZ-PZ-ge8" id="6zo-9E-9S1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Va4-zF-j7q">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XrQ-Uf-XBK" firstAttribute="leading" secondItem="2HW-mg-Nyt" secondAttribute="leading" id="Bes-8Y-0AL"/>
+                            <constraint firstItem="Va4-zF-j7q" firstAttribute="top" secondItem="XrQ-Uf-XBK" secondAttribute="bottom" id="Iff-m9-Psl"/>
+                            <constraint firstItem="XrQ-Uf-XBK" firstAttribute="trailing" secondItem="Va4-zF-j7q" secondAttribute="trailing" id="VQH-bT-hp9"/>
+                            <constraint firstItem="Va4-zF-j7q" firstAttribute="bottom" secondItem="1Sg-zs-IsM" secondAttribute="top" id="e6x-fB-EMG"/>
+                            <constraint firstItem="XrQ-Uf-XBK" firstAttribute="top" secondItem="Wcw-v5-MOv" secondAttribute="bottom" id="gjD-Ff-N0q"/>
+                            <constraint firstItem="XrQ-Uf-XBK" firstAttribute="leading" secondItem="Va4-zF-j7q" secondAttribute="leading" id="l4C-IC-uYH"/>
+                            <constraint firstAttribute="trailing" secondItem="XrQ-Uf-XBK" secondAttribute="trailing" id="oVc-6Y-2e2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="Va4-zF-j7q" id="SUt-Fv-Uwc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umt-RU-pz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="947"/>
+        </scene>
+    </scenes>
+</document>
